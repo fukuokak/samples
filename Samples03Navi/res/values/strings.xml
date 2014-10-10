@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Samples03Navi</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Example action</string>
+    <string name="action_settings">Settings</string>
+
+
+    <!-- Slide Navigation Tiltes & FLAGS-->
+
+    <string name="today">Today</string>
+    <string name="mon">Monday</string>
+    <string name="tue">Tuesday</string>
+    <string name="wed">Wednesday</string>
+    <string name="thu">Thursday</string>
+    <string name="fri">Friday</string>
+    <string name="sat">Saturday</string>
+    <string name="sun">Sunday</string>
+    <string name="analysis">Analysis</string>
+    <string name="regist">Regist Instant Task</string>
+    <string name="stocktaking">StockTaking Task</string>
+
+    <!-- Screen Tiltes -->
+    <string name="today_title">Today Schedules</string>
+    <string name="mon_title">Next Monday Schedules</string>
+    <string name="tue_title">Next Tuesday Schedules</string>
+    <string name="wed_title">Next Wednesday Schedules</string>
+    <string name="thu_title">Next Thursday Schedules</string>
+    <string name="fri_title">Next Friday Schedules</string>
+    <string name="sat_title">Next Saturday Schedules</string>
+    <string name="sun_title">Next Sunday Schedules</string>
+    <string name="analysis_title">Analysis Your History</string>
+    <string name="stocktaking_title">StockTaking Your Today</string>
+
+</resources>
