@@ -1,6 +1,4 @@
-package com.example.samples03navi.activities;
-
-import com.example.samples03navi.R;
+package com.example.samples03navi;
 
 import android.app.Fragment;
 import android.content.res.Resources;
