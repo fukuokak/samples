@@ -7,7 +7,6 @@ import android.view.View.OnClickListener;
 
 import com.example.inrequeststructure.InputActivity;
 import com.example.inrequeststructure.OutputActivity;
-import com.example.inrequeststructure.R;
 import com.example.inrequeststructure.bean.MargineBean;
 
 public class InputButtonListener implements OnClickListener {
