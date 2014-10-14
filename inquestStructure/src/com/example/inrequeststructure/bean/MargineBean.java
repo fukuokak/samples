@@ -11,8 +11,12 @@ public class MargineBean {
 		// TODO 自動生成されたコンストラクター・スタブ
 	}
 
+
 	public String getEditText() {
 		return editText;
 	}
 
+	public String convertEditText(){
+		return editText;
+	}
 }
