@@ -17,7 +17,7 @@ public class InputButtonListener implements OnClickListener {
 	private Intent intent;
 
 	public InputButtonListener(InputActivity activity , MargineBean mb) {
-		this.listenActivity = activity;
+		this.postActivity = activity;
 		this.mb = mb ;
 	}
 
@@ -44,7 +44,7 @@ public class InputButtonListener implements OnClickListener {
 	private Intent generateNextIntent() {
 		this.intent = new Intent();
 		intent.setClass(postActivity, OutputActivity.class);
-
+		intent.putExtra("ReturnCode", true);
 		return intent;
 	}
 
