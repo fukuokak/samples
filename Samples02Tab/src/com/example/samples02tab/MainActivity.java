@@ -5,6 +5,7 @@ import com.example.sample02tab.R;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -20,15 +21,15 @@ public class MainActivity extends Activity {
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
         actionBar.addTab(actionBar.newTab()
-                .setText("ページ１")
+                .setText("Google")
                 .setTabListener(new MainTabListener<Fragment1>(
                         this, "tag1", Fragment1.class)));
         actionBar.addTab(actionBar.newTab()
-                .setText("ページ２")
+                .setText("Y! News")
                 .setTabListener(new MainTabListener<Fragment2>(
                         this, "tag2", Fragment2.class)));
         actionBar.addTab(actionBar.newTab()
-                .setText("ページ３")
+                .setText("Naver")
                 .setTabListener(new MainTabListener<Fragment3>(
                         this, "tag３", Fragment3.class)));
 	}
