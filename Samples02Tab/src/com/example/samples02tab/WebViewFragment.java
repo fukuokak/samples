@@ -1,7 +1,5 @@
 package com.example.samples02tab;
 
-import com.example.sample02tab.R;
-
 import android.annotation.SuppressLint;
 import android.app.Fragment;
 import android.os.Bundle;
@@ -13,22 +11,30 @@ import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.widget.Button;
 
-@SuppressLint("NewApi")
-public class Fragment2 extends Fragment implements OnClickListener {
+import com.example.sample02tab.R;
 
-	private WebView web ;
+@SuppressLint("NewApi")
+public class WebViewFragment extends Fragment implements OnClickListener{
+
+
+	private WebView web;
+
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		Log.v(this.getClass().getName(),"StartTab2");
+
+		String uri = this.getArguments().getString("URI");
+
+		Log.v(this.getClass().getName(),"Open "+ uri);
 
 
-		View v = inflater.inflate(R.layout.fragment1, container,false);
+		View v = inflater.inflate(R.layout.webview_fragment, container,false);
 		web = (WebView)v.findViewById(R.id.webView1);
 
 		OriginalWebSettings ows = new OriginalWebSettings(web);
 		web = ows.getSettedWebView();
 		web.setWebViewClient(new OriginalWebViewClients());
+
 
         Button buttonBack = (Button)v.findViewById(R.id.backButton);
         buttonBack.setOnClickListener(this);
@@ -36,11 +42,9 @@ public class Fragment2 extends Fragment implements OnClickListener {
         buttonForward.setOnClickListener(this);
 
 
-
-		web.loadUrl("http://news.mobile.yahoo.co.jp/");
+		web.loadUrl(uri);
 		return v;
 	}
-
 
 	@Override
 	public void onClick(View v) {
@@ -66,6 +70,12 @@ public class Fragment2 extends Fragment implements OnClickListener {
 		web.goForward();
 	}
 
+	@Override
+	public void onSaveInstanceState(Bundle outState) {
+		// TODO 自動生成されたメソッド・スタブ
+		super.onSaveInstanceState(outState);
+		web.saveState(outState);
+	}
 
 	@Override
 	public void onDestroy(){
@@ -73,4 +83,6 @@ public class Fragment2 extends Fragment implements OnClickListener {
 		web.clearHistory();
 		web.clearCache(Boolean.FALSE);
 	}
+
+
 }

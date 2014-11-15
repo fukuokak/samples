@@ -20,18 +20,20 @@ public class MainActivity extends Activity {
         final ActionBar actionBar = getActionBar();
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
+        String[] uri = {"http://www.google.co.jp","http://news.mobile.yahoo.co.jp/","http://matome.naver.jp/"};
+
         actionBar.addTab(actionBar.newTab()
                 .setText("Google")
-                .setTabListener(new MainTabListener<Fragment1>(
-                        this, "tag1", Fragment1.class)));
+                .setTabListener(new MainTabListener<WebViewFragment>(
+                        this, "tag1", WebViewFragment.class,uri[0])));
         actionBar.addTab(actionBar.newTab()
                 .setText("Y! News")
-                .setTabListener(new MainTabListener<Fragment2>(
-                        this, "tag2", Fragment2.class)));
+                .setTabListener(new MainTabListener<WebViewFragment>(
+                        this, "tag2", WebViewFragment.class,uri[1])));
         actionBar.addTab(actionBar.newTab()
                 .setText("Naver")
-                .setTabListener(new MainTabListener<Fragment3>(
-                        this, "tag‚R", Fragment3.class)));
+                .setTabListener(new MainTabListener<WebViewFragment>(
+                        this, "tag3", WebViewFragment.class,uri[2])));
 	}
 
 	@Override
@@ -52,4 +54,13 @@ public class MainActivity extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+    }
+
+
+
+
 }

@@ -8,6 +8,12 @@ public class OriginalWebSettings {
 	WebView web ;
 
 	public OriginalWebSettings(WebView web){
+
+		web.canZoomIn();
+		web.canZoomOut();
+
+
+
 		WebSettings webSet = web.getSettings();
 		webSet.setJavaScriptEnabled(true);
 		webSet.setSavePassword(false);
