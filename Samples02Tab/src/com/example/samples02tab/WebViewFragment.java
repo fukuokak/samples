@@ -5,11 +5,13 @@ import android.app.Fragment;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.SurfaceView;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.example.sample02tab.R;
 
@@ -27,8 +29,9 @@ public class WebViewFragment extends Fragment implements OnClickListener{
 
 		Log.v(this.getClass().getName(),"Open "+ uri);
 
-
 		View v = inflater.inflate(R.layout.webview_fragment, container,false);
+
+		v.setDrawingCacheEnabled(Boolean.TRUE);
 		web = (WebView)v.findViewById(R.id.webView1);
 
 		OriginalWebSettings ows = new OriginalWebSettings(web);
@@ -36,11 +39,10 @@ public class WebViewFragment extends Fragment implements OnClickListener{
 		web.setWebViewClient(new OriginalWebViewClients());
 
 
-        Button buttonBack = (Button)v.findViewById(R.id.backButton);
-        buttonBack.setOnClickListener(this);
-        Button buttonForward = (Button)v.findViewById(R.id.forwardButton);
-        buttonForward.setOnClickListener(this);
-
+		ImageButton iBack = (ImageButton)v.findViewById(R.id.iBackButton);
+		ImageButton iForward = (ImageButton)v.findViewById(R.id.iForwardButton);
+		iBack.setOnClickListener(this);
+		iForward.setOnClickListener(this);
 
 		web.loadUrl(uri);
 		return v;
@@ -49,10 +51,10 @@ public class WebViewFragment extends Fragment implements OnClickListener{
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
-		case R.id.backButton:
+		case R.id.iBackButton:
 			historyBack(web);
 			break;
-		case R.id.forwardButton:
+		case R.id.iForwardButton:
 			historyForward(web);
 			break;
 		default:
