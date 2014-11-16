@@ -5,13 +5,12 @@ import android.app.Fragment;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.SurfaceView;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.webkit.WebView;
-import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import com.example.sample02tab.R;
 
@@ -37,7 +36,6 @@ public class WebViewFragment extends Fragment implements OnClickListener{
 		OriginalWebSettings ows = new OriginalWebSettings(web);
 		web = ows.getSettedWebView();
 		web.setWebViewClient(new OriginalWebViewClients());
-
 
 		ImageButton iBack = (ImageButton)v.findViewById(R.id.iBackButton);
 		ImageButton iForward = (ImageButton)v.findViewById(R.id.iForwardButton);

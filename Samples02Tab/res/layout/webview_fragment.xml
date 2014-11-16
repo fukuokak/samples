@@ -15,27 +15,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
-
-<!--
-        <Button
-            android:id="@+id/backButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left|bottom"
-            android:text="Back" />
-
-        <Button
-            android:id="@+id/forwardButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right|bottom"
-            android:text="Forward" />
- -->
         <ImageButton
             android:id="@+id/iBackButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right|bottom"
+            android:padding="0dp"
             android:src="@drawable/arrow_r" />
 
         <ImageButton
@@ -43,8 +28,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="left|bottom"
+            android:padding="0dp"
             android:src="@drawable/arrow_l" />
-
     </FrameLayout>
 
 </LinearLayout>

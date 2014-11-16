@@ -9,21 +9,22 @@ public class OriginalWebSettings {
 
 	public OriginalWebSettings(WebView web){
 
-		web.setVerticalScrollbarOverlay(true);
-
 
 		WebSettings webSet = web.getSettings();
-		webSet.setJavaScriptEnabled(true);
-		webSet.setSavePassword(false);
-		webSet.setSaveFormData(false);
-		webSet.setSupportZoom(true);
-		webSet.setDefaultTextEncodingName("UTF-8");
-		webSet.setAppCacheEnabled(true);
-		webSet.setAppCacheMaxSize(16 * 1024 * 1024);
-
 
 
 	    webSet.setCacheMode(WebSettings.LOAD_DEFAULT);
+	    webSet.setAppCacheEnabled(true);
+		webSet.setAppCacheMaxSize(16 * 1024 * 1024);
+
+		webSet.setDefaultTextEncodingName("UTF-8");
+		webSet.setSupportZoom(true);
+		webSet.setSaveFormData(false);
+		webSet.setSavePassword(false);
+
+
+		webSet.setJavaScriptEnabled(true);
+
 
 		this.web = web;
 	}
